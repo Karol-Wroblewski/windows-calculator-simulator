@@ -1,5 +1,6 @@
 import React from 'react'
 import MemoryValues from '../src/MemoryValues'
+import History from '../src/History'
 import './style/Buttons.css'
 
 function Buttons(props) {
@@ -43,6 +44,7 @@ function Buttons(props) {
       <button onClick={props.show.bind(this, "=")}>=</button>
     </div>
     <MemoryValues decision={props.decision} memory={props.memory} delete={props.delete} add={props.add} subtract={props.subtract}></MemoryValues>
+    <History history={props.history}></History>
   </div>
       
   </>

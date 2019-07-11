@@ -224,6 +224,8 @@ class App extends React.Component {
   onlyCalculate: false,
   memory: [],
   showMem: false,
+  history: [],
+  showHistory: false
   }
 
 
@@ -251,7 +253,6 @@ class App extends React.Component {
 
   additionToMemory = (id = 0) => {
     let memory = this.state.memory;
-    console.log(memory[id]);
     memory[id] = memory[id].toString().replace(/ /g, '').replace(',', '.');
     let mainContent = this.state.mainContent.toString().replace(/ /g, '').replace(',', '.');
     memory[id] = memory[id] * 1 + mainContent * 1;
@@ -292,6 +293,12 @@ class App extends React.Component {
   }
 
   showMemory = () => {
+    if(this.state.showHistory)
+    {
+      this.showHistory();
+      return;
+    }
+
     const background = document.getElementById('settingsMemory');
     
     if(!this.state.showMem)
@@ -299,10 +306,25 @@ class App extends React.Component {
     else
       background.style.transform = "translate(0, 100%)";
 
-    
-
     this.setState({
       showMem: !this.state.showMem
+    })
+  }
+
+  showHistory = () => {
+    if(this.state.showMem)
+    {
+      this.showMemory();
+      return;
+    }
+    const background = document.getElementById('history');
+    if(!this.state.showHistory)
+      background.style.transform = "translate(0, -200%)";
+    else
+      background.style.transform = "translate(0, 200%)";
+
+    this.setState({
+      showHistory: !this.state.showHistory
     })
   }
 
@@ -315,13 +337,10 @@ class App extends React.Component {
     
 
   setWarming = () => {
-
-    
     const background = document.getElementById('warmingBackground');
     const warming = document.getElementById('warming');
     if(document.body.clientHeight < 500)
     {
-      // console.log(warming);
       warming.style.display = "block";
       background.style.display = "block";
     }
@@ -1129,6 +1148,12 @@ class App extends React.Component {
         let x = calculate(this.state.upContent, this.state.mainContent.replace(/ /g, ''), this.state.symbol, this.state.operation);
         if(x === "divideError") {this.handleError(); return;}
         x = fitString(x);
+
+        let history = this.state.history;
+        let object = {up: this.state.upContent , main: this.state.mainContent, score: x}
+        history.push(object);
+
+        x = fitString(x);
           this.setState({
             upContent: "",
             mainContent: x,
@@ -1136,6 +1161,7 @@ class App extends React.Component {
             canDelete: false,
             symbol: [],
             firstAfterSymbol: true,
+            history
           })
         }
         
@@ -1149,10 +1175,10 @@ class App extends React.Component {
       <div className="calculator">
         <Warming></Warming>
         <TopBar ></TopBar>
-        <TypeCalculator></TypeCalculator>
-        <Screen showMemory={this.showMemory} mainScreen={this.state.mainContent} topLine={this.state.upContent}></Screen>
-        <MemoryButtons back={this.backFromMenu} decision={this.state.showMem} script={this.configureInterval()} memory={this.state.memory} deleteAll={this.deleteFromMemoryAll} add={this.additionToMemory} subtract={this.subtractionFromMemory} show={this.showFromMemory} save={this.saveInMemory} showMemory={this.showMemory}></MemoryButtons>
-        <Buttons decision={this.state.showMem} memory={this.state.memory} show={this.handleMainScreen} delete={this.deleteFromMemory} add={this.additionToMemory} subtract={this.subtractionFromMemory}></Buttons>
+        <TypeCalculator showHistory={this.showHistory}  ></TypeCalculator>
+        <Screen  showMemory={this.showMemory} mainScreen={this.state.mainContent} topLine={this.state.upContent} decision={this.state.showMem}></Screen>
+        <MemoryButtons showHistory={this.state.showHistory} back={this.backFromMenu} decision={this.state.showMem} script={this.configureInterval()} memory={this.state.memory} deleteAll={this.deleteFromMemoryAll} add={this.additionToMemory} subtract={this.subtractionFromMemory} show={this.showFromMemory} save={this.saveInMemory} showMemory={this.showMemory}></MemoryButtons>
+        <Buttons showMemory={this.showMemory} showHistory={this.showHistory} history={this.state.history} decision={this.state.showMem} memory={this.state.memory} show={this.handleMainScreen} delete={this.deleteFromMemory} add={this.additionToMemory} subtract={this.subtractionFromMemory}></Buttons>
       </div>
     </div>
   );

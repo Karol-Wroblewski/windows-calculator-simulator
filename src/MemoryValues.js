@@ -7,7 +7,7 @@ function MemoryValues(props){
 
 
   return(<div id="settingsMemory">
-    <ul> {Items.length > 0 ? Items : <p className="empty">No elements saved, to continue press the calculator display</p> }  </ul>
+    <ul> {Items.length > 0 ? Items : <p className="empty">No elements saved, to continue press the calculator display</p> } </ul>
     </div>);
 }
 

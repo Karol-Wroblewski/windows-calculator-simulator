@@ -23,7 +23,8 @@
     height: 390px;
   }
 
-  #settingsMemory ul {
+  #settingsMemory ul,
+  .history ul {
     padding-top: 99px;
   }
 }
@@ -31,7 +32,8 @@
 
 @media(max-width: 320px) {
 
-  #settingsMemory ul {
+  #settingsMemory ul,
+  .history ul {
     padding-top: 140px;
   }
 

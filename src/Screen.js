@@ -4,7 +4,7 @@ import './style/Screen.css'
 class Screen extends React.Component {
   render() {
     return(
-      <div onClick={this.props.showMemory} className="screen">
+      <div onClick={this.props.decision ? this.props.showMemory : ""} className="screen">
         <div className="top"><p>{this.props.topLine}</p></div>
         <p id="main">
         {this.props.mainScreen}

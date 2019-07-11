@@ -36,10 +36,9 @@ button p {
   overflow: hidden;
 }
 
-#settingsMemory {
-  /* position: relative; */
+#settingsMemory,
+#history {
   background-color: #F5F5F5;
-  height: 1px;
   transform-origin: top;
   transition: 0.15s ease-out;
   height: 480px;
@@ -50,30 +49,32 @@ button p {
   width: 7px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
   width: 7px;
 }
 
-#settingsMemory ul {
+#settingsMemory ul,
+#history ul {
   font-size: 150%;
   text-align: right;
   padding-top: 13px;
 }
 
-#settingsMemory ul li {
+#settingsMemory ul li,
+#history ul li {
   padding-right: 20px;
   padding-bottom: 40px;
   height: 30px;
+  margin-bottom: 10px;
 }
 
-#settingsMemory ul li p {
+#settingsMemory ul li p,
+#history ul li p {
   vertical-align: top;
 }
 
@@ -95,7 +96,8 @@ button p {
   background-color: #1E90FF;
 }
 
-#settingsMemory ul li:hover {
+#settingsMemory ul li:hover,
+#history ul li:hover {
   background-color: #ddd;
 }
 
@@ -104,4 +106,9 @@ ul .empty {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
+}
+
+.operation {
+  font-size: 60%;
+  color: gray;
 }

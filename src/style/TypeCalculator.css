@@ -19,3 +19,17 @@
 .type p {
   margin-left: 50px;
 }
+
+.history:hover {
+  background-color: #ccc;
+}
+
+.history {
+  position: absolute;
+  right: 2px;
+  padding: 5px;
+}
+
+.type .fa-history {
+  position: static;
+}

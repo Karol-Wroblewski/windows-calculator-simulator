@@ -3,7 +3,6 @@ import './style/MemoryButtons.css'
 
 function MemoryButtons(props) {
   return(
-
     <div className="memory">
       <button disabled={props.memory.length <= 0 || props.decision} onClick={props.deleteAll} title="Clean memory">MC</button>
       <button disabled={props.memory.length <= 0 || props.decision} onClick={props.show}>MR</button>
