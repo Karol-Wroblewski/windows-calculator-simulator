@@ -1,0 +1,2 @@
+
+.icon-math { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf01a;&nbsp;'); }
