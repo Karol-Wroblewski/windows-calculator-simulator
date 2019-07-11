@@ -1,0 +1,91 @@
+.memory button {
+  height: 50px;
+  width: calc(100% / 6);
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  background-color: #eee;
+  position: relative;
+}
+
+.memory button:hover {
+  background-color: #bbb;
+}
+
+.memory button:disabled:hover {
+  background-color: #eee;
+}
+
+
+.memory {
+  background-color: #eee;
+}
+
+button p {
+  position: relative;
+}
+
+.fa-sort-down {
+  position: absolute;
+  top: -15%;
+  left: 60%;
+}
+
+.buttons {
+  height: 480px;
+  overflow: hidden;
+}
+
+#settingsMemory {
+  /* position: relative; */
+  background-color: #F5F5F5;
+  height: 1px;
+  transform-origin: top;
+  transition: 0.15s ease-out;
+  height: 480px;
+}
+
+#settingsMemory ul {
+  font-size: 150%;
+  text-align: right;
+  padding-top: 13px;
+}
+
+#settingsMemory ul li {
+  padding-right: 20px;
+  padding-bottom: 40px;
+  height: 30px;
+}
+
+#settingsMemory ul li p {
+  vertical-align: top;
+}
+
+#settingsMemory ul li p button {
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: white;
+  border: none;
+  display: none;
+  width: 35px;
+}
+
+#settingsMemory ul li:hover p button {
+  display: inline-block;
+}
+
+#settingsMemory ul li p button:hover {
+  background-color: #1E90FF;
+}
+
+#settingsMemory ul li:hover {
+  background-color: #ddd;
+}
+
+ul .empty {
+  padding-left: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}

@@ -1,0 +1,21 @@
+.type {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #eee;
+}
+
+.type i,
+.type p {
+  font-size: 22px;
+}
+
+.type i {
+  position: absolute;
+  bottom: 2px;
+  left: 5px;
+}
+
+.type p {
+  margin-left: 50px;
+}

@@ -1,0 +1,83 @@
+@media(max-width: 414px) {
+  .calculator {
+    width: 350px;
+  }
+
+  .screen {
+    height: 120px;
+  }
+
+  .screen .top p {
+    font-size: 8px;
+  }
+
+  .memory button {
+    height: 30px;
+  }
+
+  .row button {
+    height: 65px;
+  }
+
+  .buttons {
+    height: 390px;
+  }
+
+  #settingsMemory ul {
+    padding-top: 99px;
+  }
+}
+
+
+@media(max-width: 320px) {
+
+  #settingsMemory ul {
+    padding-top: 140px;
+  }
+
+  .calculator {
+    width: 290px;
+  }
+
+  .screen {
+    height: 90px;
+  }
+
+  .screen .top p {
+    font-size: 8px;
+  }
+
+  .memory button {
+    height: 30px;
+  }
+
+  .row button {
+    height: 58px;
+  }
+
+  .buttons {
+    height: 348px;
+  }
+}
+
+#warming {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200%;
+  z-index: 3;
+  display: none;
+}
+
+#warmingBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  background-color: #ddd;
+  display: none
+}

@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row button {
+  width: 25%;
+  height: 80px;
+  font-size: 24px;
+  border: none;
+  background-color: #F5F5F5;
+  border: 1px solid #eee;
+}
+
+.row button:hover {
+  background-color: #bbb;
+}
+
+button.bold {
+  font-weight: bold;
+  background-color: #fff;
+
+}
+
+.row .bigFont {
+  font-size: 40px;
+  font-weight: 100;
+}

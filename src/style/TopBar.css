@@ -1,0 +1,24 @@
+.topBar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #eee;
+}
+
+.topBar p,
+.topBar i {
+  font-size: 15px;
+}
+
+.topBar p {
+  padding: 5px 0 10px 5px;
+}
+
+.topBar section {
+  position: absolute;
+  right: 3px;
+}
+
+.topBar section i {
+  padding: 10px;
+}

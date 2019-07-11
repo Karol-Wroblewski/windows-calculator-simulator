@@ -1,0 +1,42 @@
+.screen {
+  height: 150px;
+  background-color: #eee;
+  position: relative;
+}
+
+.top {
+  height: 30px;
+  position: relative;
+}
+
+.screen .top p {
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  font-size: 10px;
+  word-wrap: break-word;
+}
+
+.screen .low {
+  font-size: 10px;
+}
+
+.screen p {
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  position: absolute;
+  font-size: 46px;
+}
+
+.top p .icon-math {
+  font-size: 15px;
+  opacity: 0.3;
+}
+
+.low .fa-divide {
+  opacity: 0.5;
+  font-size: 9px;
+}
