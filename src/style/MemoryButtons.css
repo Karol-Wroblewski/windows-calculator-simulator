@@ -43,6 +43,22 @@ button p {
   transform-origin: top;
   transition: 0.15s ease-out;
   height: 480px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+  width: 7px;
 }
 
 #settingsMemory ul {
